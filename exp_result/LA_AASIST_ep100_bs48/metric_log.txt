@@ -1,0 +1,5 @@
+=====
+=====
+epoch004, best eer, 3.6816%best tdcf, 0.0998
+epoch007, best eer, 2.6001%best tdcf, 0.0737
+=====
