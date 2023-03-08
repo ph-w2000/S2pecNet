@@ -1,4 +1,4 @@
-# AASIST
+# S2pecNet
 
 This repository provides the overall framework for training and evaluating audio anti-spoofing systems proposed in ['AASIST: Audio Anti-Spoofing using Integrated Spectro-Temporal Graph Attention Networks'](https://arxiv.org/abs/2110.01200)
 
