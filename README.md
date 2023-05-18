@@ -3,6 +3,12 @@
 This repository provides the overall framework for training and evaluating audio anti-spoofing systems proposed in ['Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms'](https://arxiv.org/abs/2110.01200)
 
 ### Getting started
+```
+conda create -n s2pecnet python=3.9
+conda activate s2pecnet
+```
+
+
 `requirements.txt` must be installed for execution. We state our experiment environment for those who prefer to simulate as similar as possible. 
 - Installing dependencies
 ```
@@ -14,7 +20,7 @@ pip install -r requirements.txt
   - gpu-driver: 470.63.01
 
 ### Data preparation
-We train/validate/evaluate S2pecNet using the ASVspoof 2019 logical access dataset [4].
+1. We train/validate/evaluate S2pecNet using the ASVspoof 2019 logical access dataset [2].
 ```
 python ./download_dataset.py
 ```
@@ -22,6 +28,8 @@ python ./download_dataset.py
 - ASVspoof2019 dataset: https://datashare.ed.ac.uk/handle/10283/3336
   1. Download `LA.zip` and unzip it
   2. Set your dataset directory in the configuration file
+
+2. The power spectrogram features are extracted with the MATLAB implementation provided by the ASVspoof 2019 organizers. Please first run the `./extractor/process_LA_data.m` with MATLAB, and then run python `./extractor/reload_data.py` with python. Make sure you change the directory path to the path on your machine.
 
 ### Training 
 The `main.py` includes train/validation/evaluation.
@@ -35,10 +43,10 @@ python main.py --config ./config/S2pecNet.conf
 ### Pre-trained models
 We provide pre-trained AASIST and AASIST-L.
 
-To evaluate S2pecNet [1]:
+To evaluate S2pecNet []:
 - It shows `EER: 0.77%`, `min t-DCF: 0.0242`
 ```
-python main.py --eval --config ./config/AASIST.conf
+python main.py --eval --config ./config/S2pecNet.conf
 ```
 
 ### Developing custom models
@@ -61,10 +69,12 @@ To train a custom model:
 
 ### Acknowledgements
 This repository is built on top of several open source projects. 
-- [ASVspoof 2021 baseline repo](https://github.com/asvspoof-challenge/2021/tree/main/LA/Baseline-RawNet2)
 - [min t-DCF implementation](https://www.asvspoof.org/resources/tDCF_python_v2.zip)
 
-The dataset we use is ASVspoof 2019 [4]
+The repository for baseline AASIST[1] model will be open
+- https://github.com/clovaai/aasist
+
+The dataset we use is ASVspoof 2019 [2]
 - https://www.asvspoof.org/index2019.html
 
 ### References
@@ -76,5 +86,15 @@ The dataset we use is ASVspoof 2019 [4]
   title={AASIST: Audio Anti-Spoofing using Integrated Spectro-Temporal Graph Attention Networks}, 
   year={2021}
 ```
-
+[2] ASVspoof 2019: A large-scale public database of synthesized, converted and replayed speech
+```bibtex
+@article{wang2020asvspoof,
+  title={ASVspoof 2019: A large-scale public database of synthesized, converted and replayed speech},
+  author={Wang, Xin and Yamagishi, Junichi and Todisco, Massimiliano and Delgado, H{\'e}ctor and Nautsch, Andreas and Evans, Nicholas and Sahidullah, Md and Vestman, Ville and Kinnunen, Tomi and Lee, Kong Aik and others},
+  journal={Computer Speech \& Language},
+  volume={64},
+  pages={101114},
+  year={2020},
+  publisher={Elsevier}
+}
 ```

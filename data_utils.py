@@ -5,10 +5,6 @@ from torch import Tensor
 from torch.utils.data import Dataset
 import pickle
 
-___author__ = "Hemlata Tak, Jee-weon Jung"
-__email__ = "tak@eurecom.fr, jeeweon.jung@navercorp.com"
-
-
 def genSpoof_list(dir_meta, is_train=False, is_eval=False):
 
     d_meta = {}
