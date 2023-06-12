@@ -1,6 +1,6 @@
 # S2pecNet
 
-This repository provides the overall framework for training and evaluating audio anti-spoofing systems proposed in ['Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms'](https://arxiv.org/abs/2110.01200)
+This repository provides the overall framework for training and evaluating audio anti-spoofing systems proposed in ['Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms']()
 
 ### Getting started
 ```
