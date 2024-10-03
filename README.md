@@ -63,10 +63,6 @@ To train a custom model:
 3. run python main.py --config {CUSTOM_CONFIG_NAME}
 ```
 
-### License
-```
-
-```
 
 ### Acknowledgements
 This repository is built on top of several open source projects. 
@@ -79,6 +75,17 @@ The dataset we use is ASVspoof 2019 [2]
 - https://www.asvspoof.org/index2019.html
 
 ### References
+Please cite us :-)
+@inproceedings{wen23_interspeech,
+  title     = {Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms},
+  author    = {Penghui Wen and Kun Hu and Wenxi Yue and Sen Zhang and Wanlei Zhou and Zhiyong Wang},
+  year      = {2023},
+  booktitle = {INTERSPEECH 2023},
+  pages     = {271--275},
+  doi       = {10.21437/Interspeech.2023-563},
+  issn      = {2958-1796},
+}
+
 [1] AASIST: Audio Anti-Spoofing using Integrated Spectro-Temporal Graph Attention Networks
 ```bibtex
 @INPROCEEDINGS{Jung2021AASIST,
