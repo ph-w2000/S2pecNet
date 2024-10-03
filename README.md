@@ -75,7 +75,8 @@ The dataset we use is ASVspoof 2019 [2]
 - https://www.asvspoof.org/index2019.html
 
 ### References
-Please cite us :-)
+Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms
+```bibtex
 @inproceedings{wen23_interspeech,
   title     = {Robust Audio Anti-Spoofing with Fusion-Reconstruction Learning on Multi-Order Spectrograms},
   author    = {Penghui Wen and Kun Hu and Wenxi Yue and Sen Zhang and Wanlei Zhou and Zhiyong Wang},
@@ -85,6 +86,7 @@ Please cite us :-)
   doi       = {10.21437/Interspeech.2023-563},
   issn      = {2958-1796},
 }
+```
 
 [1] AASIST: Audio Anti-Spoofing using Integrated Spectro-Temporal Graph Attention Networks
 ```bibtex
